@@ -13,8 +13,7 @@ My main parts:
 * Prefab system
 * Editor (most parts of it e.g. material editor, animation editor, asset browser)
 * Streaming Multithreaded Resource Management System
-* Custom .model format
-* Custom .anim format
+* Offline Asset Pipeline (custom model and animation formats)
 * Curve Editor
 
 Have been used to create 3 games listed below:
