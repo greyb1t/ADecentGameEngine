@@ -1,6 +1,22 @@
 # DogEngine
 An engine I have been part of writing for 3 school game projects
 
+My main parts:
+
+* Rendering (e.g. Optimization, Post Processing, Decals, Debug Drawing)
+* Material System
+* Engine structure
+* Animation System
+* Scene system
+* Reflection
+* Serialization
+* Prefab system
+* Editor (most parts of it e.g. material editor, animation editor, asset browser)
+* Streaming Multithreaded Resource Management System
+* Custom .model format
+* Custom .anim format
+* Curve Editor
+
 Have been used to create 3 games listed below:
 
 Starfall: https://www.youtube.com/watch?v=_0jA8NTG43Y
