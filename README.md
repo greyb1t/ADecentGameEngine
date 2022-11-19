@@ -3,7 +3,7 @@ An engine I have been part of writing for 3 school game projects
 
 My main parts:
 
-* Rendering (e.g. Optimization, Post Processing, Decals, Debug Drawing)
+* Rendering
 * Material System
 * Engine structure
 * Animation System
