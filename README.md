@@ -12,7 +12,7 @@ My main parts:
 * Serialization
 * Prefab system
 * Editor (most parts of it e.g. material editor, animation editor, asset browser)
-* Streaming Multithreaded Resource Management System
+* Multithreaded Resource Management System (supports streaming)
 * Offline Asset Pipeline (custom model and animation formats)
 * Curve Editor
 
