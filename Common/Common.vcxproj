@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profiling|x64">
+      <Configuration>Profiling</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Retail|x64">
+      <Configuration>Retail</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{fc91b01f-b773-4ed0-b0b2-a2d9592a4b05}</ProjectGuid>
+    <RootNamespace>Common</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\Lib\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\Lib\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\Lib\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\Lib\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Includes\;$(ProjectDir);$(SolutionDir)imgui\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Includes\;$(ProjectDir);$(SolutionDir)imgui\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Includes\;$(ProjectDir);$(SolutionDir)imgui\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_RETAIL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Includes\;$(ProjectDir);$(SolutionDir)imgui\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\AABB3D.hpp" />
+    <ClInclude Include="Common\AnimationCurve.h" />
+    <ClInclude Include="Common\BetterEnums\enum.h" />
+    <ClInclude Include="Common\BinaryReader.h" />
+    <ClInclude Include="Common\BinaryWriter.h" />
+    <ClInclude Include="Common\BSTSet.hpp" />
+    <ClInclude Include="Common\CommonUtilities.h" />
+    <ClInclude Include="Common\delaunay.h" />
+    <ClInclude Include="Common\DoublyLinkedList.hpp" />
+    <ClInclude Include="Common\DoublyLinkedListNode.hpp" />
+    <ClInclude Include="Common\Enums.hpp" />
+    <ClInclude Include="Common\FileIO.h" />
+    <ClInclude Include="Common\FileWatcher.h" />
+    <ClInclude Include="Common\HashMap.hpp" />
+    <ClInclude Include="Common\Heap.hpp" />
+    <ClInclude Include="Common\Horspool.hpp" />
+    <ClInclude Include="Common\InputManager.h" />
+    <ClInclude Include="Common\Intersection.hpp" />
+    <ClInclude Include="Common\JsonManager\JsonFile.h" />
+    <ClInclude Include="Common\JsonManager\JsonManager.h" />
+    <ClInclude Include="Common\JsonUtils.hpp" />
+    <ClInclude Include="Common\Line.hpp" />
+    <ClInclude Include="Common\LineVolume.hpp" />
+    <ClInclude Include="Common\Log.h" />
+    <ClInclude Include="Common\Math\Bezier.h" />
+    <ClInclude Include="Common\Math\BezierSpline.h" />
+    <ClInclude Include="Common\Math\Internal\Matrix2x2.h" />
+    <ClInclude Include="Common\Math\Internal\Matrix3x3.h" />
+    <ClInclude Include="Common\Math\Internal\Matrix4x4.h" />
+    <ClInclude Include="Common\Math\Internal\Quaternion.h" />
+    <ClInclude Include="Common\Math\Internal\Vector2.h" />
+    <ClInclude Include="Common\Math\Internal\Vector3.h" />
+    <ClInclude Include="Common\Math\Internal\Vector4.h" />
+    <ClInclude Include="Common\Math\Math.h" />
+    <ClInclude Include="Common\nlohmann\json.hpp" />
+    <ClInclude Include="Common\ObjectPool.h" />
+    <ClInclude Include="Common\ObjectPoolGrowable.h" />
+    <ClInclude Include="Common\ObjectPoolUntyped.h" />
+    <ClInclude Include="Common\Path.h" />
+    <ClInclude Include="Common\Math\PerlinNoise.h" />
+    <ClInclude Include="Common\Plane.hpp" />
+    <ClInclude Include="Common\PlaneVolume.hpp" />
+    <ClInclude Include="Common\Queue.hpp" />
+    <ClInclude Include="Common\Random.h" />
+    <ClInclude Include="Common\Ray.hpp" />
+    <ClInclude Include="Common\RingBuffer.h" />
+    <ClInclude Include="Common\Sort.hpp" />
+    <ClInclude Include="Common\Sphere.hpp" />
+    <ClInclude Include="Common\Stack.hpp" />
+    <ClInclude Include="Common\LinearAllocator.h" />
+    <ClInclude Include="Common\StringUtilities.h" />
+    <ClInclude Include="Common\ThreadPool\ThreadPool.h" />
+    <ClInclude Include="Common\Timer.h" />
+    <ClInclude Include="Common\TimerTemp.h" />
+    <ClInclude Include="Common\Types.h" />
+    <ClInclude Include="Common\VectorOnStack.h" />
+    <ClInclude Include="Common\UnrealUtils.h" />
+    <ClInclude Include="Common\XInput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\AnimationCurve.cpp" />
+    <ClCompile Include="Common\BinaryReader.cpp" />
+    <ClCompile Include="Common\BinaryWriter.cpp" />
+    <ClCompile Include="Common\FileIO.cpp" />
+    <ClCompile Include="Common\HashMap.cpp" />
+    <ClCompile Include="Common\InputManager.cpp" />
+    <ClCompile Include="Common\Math\Bezier.cpp" />
+    <ClCompile Include="Common\Math\BezierSpline.cpp" />
+    <ClCompile Include="Common\Math\Math.cpp" />
+    <ClCompile Include="Common\ObjectPool.cpp" />
+    <ClCompile Include="Common\ObjectPoolGrowable.cpp" />
+    <ClCompile Include="Common\Path.cpp" />
+    <ClCompile Include="Common\FileWatcher.cpp" />
+    <ClCompile Include="Common\JsonManager\JsonFile.cpp" />
+    <ClCompile Include="Common\JsonManager\JsonManager.cpp" />
+    <ClCompile Include="Common\Log.cpp" />
+    <ClCompile Include="Common\ObjectPoolUntyped.cpp" />
+    <ClCompile Include="Common\Math\PerlinNoise.cpp" />
+    <ClCompile Include="Common\Random.cpp" />
+    <ClCompile Include="Common\LinearAllocator.cpp" />
+    <ClCompile Include="Common\StringUtilities.cpp" />
+    <ClCompile Include="Common\ThreadPool\ThreadPool.cpp" />
+    <ClCompile Include="Common\Timer.cpp" />
+    <ClCompile Include="Common\UnrealUtils.cpp" />
+    <ClCompile Include="Common\XInput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Common\Math\Internal\Matrix2x2.inl" />
+    <None Include="Common\Math\Internal\Matrix3x3.inl" />
+    <None Include="Common\Math\Internal\Matrix4x4.inl" />
+    <None Include="Common\Math\Internal\Quaternion.inl" />
+    <None Include="Common\Math\Internal\Vector2.inl" />
+    <None Include="Common\Math\Internal\Vector3.inl" />
+    <None Include="Common\Math\Internal\Vector4.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

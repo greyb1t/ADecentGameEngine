@@ -1,0 +1,9 @@
+GAMMA CORRECTION:
+	Loading textures using DirectXTK loads them with *sRGB, so no need to gamma correct in shaders.
+	The proper way to gamma correct before displaying on screen is to use SRGB backbuffer texture.
+	But because we use ImGui, when drawing ImGui to SRGB backbuffer colors are wrong.
+	Therefore we manually turn the pixels into Gamma space before rendering the final result
+	to the scene texture.
+	Reference: https://developer.nvidia.com/gpugems/gpugems3/part-iv-image-effects/chapter-24-importance-being-linear
+	
+	

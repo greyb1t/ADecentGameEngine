@@ -1,0 +1,29 @@
+#pragma once
+#include "BT_Composite.h"
+
+// The StatefulSelector composite ticks each child node in order, and remembers what child it prevously tried to tick.
+	// If a child succeeds or runs, the stateful selector returns the same status.
+	// In the next tick, it will try to run the next child or start from the beginning again.
+	// If all children fails, only then does the stateful selector fail.
+class BT_StatefulSelector : public BT_Composite
+{
+public:
+	Status update() override
+	{
+		assert(hasChildren() && "Composite has no children");
+
+		while (it != children.end()) {
+			auto status = (*it)->tick();
+
+			if (status != Status::Failure) {
+				return status;
+			}
+
+			it++;
+		}
+
+		it = children.begin();
+		return Status::Failure;
+	}
+};
+

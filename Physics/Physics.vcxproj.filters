@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Physics\CharacterController.cpp" />
+    <ClCompile Include="Physics\CollisionData.cpp" />
+    <ClCompile Include="Physics\pch\pch.cpp" />
+    <ClCompile Include="Physics\Physics.cpp" />
+    <ClCompile Include="Physics\PhysicsListener.cpp" />
+    <ClCompile Include="Physics\PhysicsScene.cpp" />
+    <ClCompile Include="Physics\RayCastHitInternal.cpp" />
+    <ClCompile Include="Physics\RayCastHitProcessor.cpp" />
+    <ClCompile Include="Physics\RigidBody.cpp" />
+    <ClCompile Include="Physics\RigidStatic.cpp" />
+    <ClCompile Include="Physics\Filters\PhysXQueryFilter.cpp" />
+    <ClCompile Include="Physics\Shape.cpp" />
+    <ClCompile Include="Physics\CollisionRegister.cpp" />
+    <ClCompile Include="Physics\Filters\FilterCCTMove.cpp" />
+    <ClCompile Include="Physics\CCTHitReporter.cpp" />
+    <ClCompile Include="Physics\PhysicsMaterialManager.cpp" />
+    <ClCompile Include="Physics\CookingManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Physics\CharacterController.h" />
+    <ClInclude Include="Physics\OverlapHitInternal.h" />
+    <ClInclude Include="Physics\CollisionData.h" />
+    <ClInclude Include="Physics\pch\pch.h" />
+    <ClInclude Include="Physics\Physics.h" />
+    <ClInclude Include="Physics\Filters\PhysicsFilter.h" />
+    <ClInclude Include="Physics\PhysicsListener.h" />
+    <ClInclude Include="Physics\PhysicsScene.h" />
+    <ClInclude Include="Physics\Filters\PhysXFilterShader.h" />
+    <ClInclude Include="Physics\RayCastHitInternal.h" />
+    <ClInclude Include="Physics\RayCastHitProcessor.h" />
+    <ClInclude Include="Physics\RigidBody.h" />
+    <ClInclude Include="Physics\RigidStatic.h" />
+    <ClInclude Include="Physics\Types.h" />
+    <ClInclude Include="Physics\Filters\PhysXQueryFilter.h" />
+    <ClInclude Include="Physics\Shape.h" />
+    <ClInclude Include="Physics\CollisionRegister.h" />
+    <ClInclude Include="Physics\Filters\FilterCCTMove.h" />
+    <ClInclude Include="Physics\CCTHitReporter.h" />
+    <ClInclude Include="Physics\PhysicsEnums.h" />
+    <ClInclude Include="Physics\PhysicsMaterialManager.h" />
+    <ClInclude Include="Physics\CookingManager.h" />
+  </ItemGroup>
+</Project>

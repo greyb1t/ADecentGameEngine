@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profiling|x64">
+      <Configuration>Profiling</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Retail|x64">
+      <Configuration>Retail</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2EBC0F76-239C-4CBF-A09F-55AADEC01B6D}</ProjectGuid>
+    <RootNamespace>FBXToModel</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+    <OutDir>$(SolutionDir)..\Bin\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+    <OutDir>$(SolutionDir)..\Bin\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+    <OutDir>$(SolutionDir)..\Bin\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+    <OutDir>$(SolutionDir)..\Bin\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(SolutionDir)Physics\;$(SolutionDir)Game;$(SolutionDir)Engine;$(SolutionDir)Common\;$(SolutionDir)rapidjson\;$(SolutionDir);$(SolutionDir)..\Includes\;$(SolutionDir)imgui\;$(SolutionDir)ImGuizmo\;$(SolutionDir)imgui_node_editor\;$(SolutionDir)..\Includes\physx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Lib;$(SolutionDir)..\Lib\physx\debug;$(SolutionDir)..\Lib\ffmpeg\;$(SolutionDir)..\Lib\flatbuffers\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine_$(Configuration).lib;Physics_$(Configuration).lib;Common_$(Configuration).lib;DirectXTex_Debug.lib;PhysXExtensions_static_64.lib;PhysX_64.lib;PhysXCooking_64.lib;PhysXCommon_64.lib;PhysXVehicle_static_64.lib;PhysXCharacterKinematic_static_64.lib;PhysXTask_static_64.lib;PhysXPvdSDK_static_64.lib;SimulationController_static_64.lib;LowLevelDynamics_static_64.lib;PhysXFoundation_64.lib;SceneQuery_static_64.lib;LowLevelAABB_static_64.lib;LowLevel_static_64.lib;FmodTest_$(Configuration).lib;fmodstudioL_vc.lib;fmodL_vc.lib;LevelImporter_$(Configuration).lib;d3dcompiler.lib;dxguid.lib;libdeflatestatic.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;portaudio_static_x64.lib;postproc.lib;swresample.lib;swscale.lib;flatbuffers_Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>PhysX_64.dll;PhysXCommon_64.dll;PhysXCooking_64.dll;PhysXFoundation_64.dll;PhysXGpu_64.dll;fmodstudioL.dll;fmodL.dll;assimp-vc142-mt.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(SolutionDir)Physics\;$(SolutionDir)Game;$(SolutionDir)Engine;$(SolutionDir)Common\;$(SolutionDir)rapidjson\;$(SolutionDir);$(SolutionDir)..\Includes\;$(SolutionDir)imgui\;$(SolutionDir)ImGuizmo\;$(SolutionDir)imgui_node_editor\;$(SolutionDir)..\Includes\physx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Lib;$(SolutionDir)..\Lib\physx\release;$(SolutionDir)..\Lib\ffmpeg\;$(SolutionDir)..\Lib\flatbuffers\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine_$(Configuration).lib;Physics_$(Configuration).lib;Common_$(Configuration).lib;DirectXTex_Release.lib;PhysXExtensions_static_64.lib;PhysX_64.lib;PhysXCooking_64.lib;PhysXCommon_64.lib;PhysXVehicle_static_64.lib;PhysXCharacterKinematic_static_64.lib;PhysXTask_static_64.lib;PhysXPvdSDK_static_64.lib;SimulationController_static_64.lib;LowLevelDynamics_static_64.lib;PhysXFoundation_64.lib;SceneQuery_static_64.lib;LowLevelAABB_static_64.lib;LowLevel_static_64.lib;FmodTest_$(Configuration).lib;fmodstudioL_vc.lib;fmodL_vc.lib;LevelImporter_$(Configuration).lib;d3dcompiler.lib;dxguid.lib;libdeflatestatic.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;portaudio_static_x64.lib;postproc.lib;swresample.lib;swscale.lib;flatbuffers_Release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>PhysX_64.dll;PhysXCommon_64.dll;PhysXCooking_64.dll;PhysXFoundation_64.dll;PhysXGpu_64.dll;fmodstudioL.dll;fmodL.dll;assimp-vc142-mt.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profiling|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;TRACY_ENABLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(SolutionDir)Physics\;$(SolutionDir)Game;$(SolutionDir)Engine;$(SolutionDir)Common\;$(SolutionDir)rapidjson\;$(SolutionDir);$(SolutionDir)..\Includes\;$(SolutionDir)imgui\;$(SolutionDir)ImGuizmo\;$(SolutionDir)imgui_node_editor\;$(SolutionDir)..\Includes\physx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Lib;$(SolutionDir)..\Lib\physx\release;$(SolutionDir)..\Lib\ffmpeg\;$(SolutionDir)..\Lib\flatbuffers\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine_$(Configuration).lib;Physics_$(Configuration).lib;Common_$(Configuration).lib;DirectXTex_Release.lib;PhysXExtensions_static_64.lib;PhysX_64.lib;PhysXCooking_64.lib;PhysXCommon_64.lib;PhysXVehicle_static_64.lib;PhysXCharacterKinematic_static_64.lib;PhysXTask_static_64.lib;PhysXPvdSDK_static_64.lib;SimulationController_static_64.lib;LowLevelDynamics_static_64.lib;PhysXFoundation_64.lib;SceneQuery_static_64.lib;LowLevelAABB_static_64.lib;LowLevel_static_64.lib;FmodTest_$(Configuration).lib;fmodstudioL_vc.lib;fmodL_vc.lib;LevelImporter_$(Configuration).lib;d3dcompiler.lib;dxguid.lib;libdeflatestatic.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;portaudio_static_x64.lib;postproc.lib;swresample.lib;swscale.lib;flatbuffers_Release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>PhysX_64.dll;PhysXCommon_64.dll;PhysXCooking_64.dll;PhysXFoundation_64.dll;PhysXGpu_64.dll;fmodstudioL.dll;fmodL.dll;assimp-vc142-mt.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_RETAIL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(SolutionDir)Physics\;$(SolutionDir)Game;$(SolutionDir)Engine;$(SolutionDir)Common\;$(SolutionDir)rapidjson\;$(SolutionDir);$(SolutionDir)..\Includes\;$(SolutionDir)imgui\;$(SolutionDir)ImGuizmo\;$(SolutionDir)imgui_node_editor\;$(SolutionDir)..\Includes\physx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Lib;$(SolutionDir)..\Lib\physx\release;$(SolutionDir)..\Lib\ffmpeg\;$(SolutionDir)..\Lib\flatbuffers\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine_$(Configuration).lib;Physics_$(Configuration).lib;Common_$(Configuration).lib;DirectXTex_Release.lib;PhysXExtensions_static_64.lib;PhysX_64.lib;PhysXCooking_64.lib;PhysXCommon_64.lib;PhysXVehicle_static_64.lib;PhysXCharacterKinematic_static_64.lib;PhysXTask_static_64.lib;PhysXPvdSDK_static_64.lib;SimulationController_static_64.lib;LowLevelDynamics_static_64.lib;PhysXFoundation_64.lib;SceneQuery_static_64.lib;LowLevelAABB_static_64.lib;LowLevel_static_64.lib;FmodTest_$(Configuration).lib;fmodstudioL_vc.lib;fmodL_vc.lib;LevelImporter_$(Configuration).lib;d3dcompiler.lib;dxguid.lib;libdeflatestatic.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;portaudio_static_x64.lib;postproc.lib;swresample.lib;swscale.lib;flatbuffers_Release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>PhysX_64.dll;PhysXCommon_64.dll;PhysXCooking_64.dll;PhysXFoundation_64.dll;PhysXGpu_64.dll;fmodstudioL.dll;fmodL.dll;assimp-vc142-mt.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FBXToModel.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
