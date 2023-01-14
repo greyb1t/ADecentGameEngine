@@ -1,4 +1,4 @@
-# DogEngine
+# A Decent Game Engine
 An engine I have been part of writing for 3 school game projects
 
 My main parts:
